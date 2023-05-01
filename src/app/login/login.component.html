@@ -1,16 +1,14 @@
 <main>
-    <section id="section-login">
-        <h2>Login</h2>
-        <form class="form-inline">
-            <div class="form-group mb-2">
-              <label for="staticUsuario" class="sr-only">Usuário</label>
-              <input type="text" class="form-control" id="staticUsuario" placeholder="nickname ou email">
-            </div>
-            <div class="form-group mx-sm-3 mb-2">
-              <label for="inputPassword2" class="sr-only">Senha</label>
-              <input type="password" class="form-control" id="inputPassword2" placeholder="Senha">
-            </div>
-            <button type="submit" class="btn btn-primary mb-2">Entrar</button>
-          </form>
-    </section>
+  <section id="section-login">
+    <form>
+      <div>
+        <label for="usuario">Email</label>
+        <input name="usuario" required type="text" [(ngModel)]="usuario">
+        <br>
+        <label for="password">Password</label>
+        <input name="password" type="password" [(ngModel)]="senha">
+      </div>
+      <button (click)="fazerLogin()">Login</button>
+    </form>
+  </section>
 </main>
